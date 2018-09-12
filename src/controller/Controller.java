@@ -10,7 +10,6 @@ public class Controller
 	//ALWAY PRIVATE!!!!
 	private MarshmallowMonster myMonster;
 	private MarshmallowMonster userMonster;
-	private Scanner inputScanner;
 	
 	//Constructors initialize data members!
 	public Controller()//Call Parameter
