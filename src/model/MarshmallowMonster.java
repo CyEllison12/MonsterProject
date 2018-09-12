@@ -31,7 +31,7 @@ public class MarshmallowMonster
 		this.armCount = arms;
 	}
 	
-	public String toString()
+	public String toString()//formal parameter
 	{
 		String description = "This monster is named: " + name
 							+ "\nand he has " + legCount + " legs...."
