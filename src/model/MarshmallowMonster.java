@@ -4,10 +4,10 @@ public class MarshmallowMonster
 {
 //--------------------Declaration section------------------------
 	private String name;
-	private double legCount;
-	private int eyeCount;
-	private boolean hasNoses;
-	private int armCount;
+	private String legCount;
+	private String eyeCount;
+	private String hasNoses;
+	private String armCount;
 //---------------------------------------------------------------
 	
 	
@@ -22,7 +22,7 @@ public class MarshmallowMonster
 		this.name = name; 
 	}
 	
-	public MarshmallowMonster(String name, double legCount, int eyeCount, boolean hasNose, int arms)
+	public MarshmallowMonster(String name, String legCount, String eyeCount, String hasNose, String arms)
 	{
 		this.name = name;
 		this.legCount = legCount;
@@ -35,19 +35,19 @@ public class MarshmallowMonster
 	{
 		return name;//return should always be last statement
 	}
-	public double getLegCount()
+	public String getLegCount()
 	{
 		return legCount;
 	}
-	public int getEyeCount()
+	public String getEyeCount()
 	{
 		return eyeCount;
 	}
-	public boolean getHasNose()
+	public String getHasNose()
 	{
 		return hasNoses;
 	}
-	public int getArmCount()
+	public String getArmCount()
 	{
 		return armCount;
 	}
@@ -56,19 +56,19 @@ public class MarshmallowMonster
 	{
 		this.name = name;
 	}
-	public void setLegCount(double legCount)
+	public void setLegCount(String legs)
 	{
-		this.legCount = legCount;
+		this.legCount = legs;
 	}
-	public void setEyeCount(int eyeCount)
+	public void setEyeCount(String eyeCount)
 	{
 		this.eyeCount = eyeCount;
 	}
-	public void setHasNose(boolean hasNose)
+	public void setHasNose(String hasNose)
 	{
 		this.hasNoses = hasNose;
 	}
-	public void setArmCount(int armCount)
+	public void setArmCount(String armCount)
 	{
 		this.armCount = armCount;
 	}
