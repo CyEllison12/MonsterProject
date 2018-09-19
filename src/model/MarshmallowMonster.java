@@ -4,10 +4,10 @@ public class MarshmallowMonster
 {
 //--------------------Declaration section------------------------
 	private String name;
-	private String legCount;
-	private String eyeCount;
+	private int legCount;
+	private int eyeCount;
 	private String hasNoses;
-	private String armCount;
+	private int armCount;
 //---------------------------------------------------------------
 	
 	
@@ -22,7 +22,7 @@ public class MarshmallowMonster
 		this.name = name; 
 	}
 	
-	public MarshmallowMonster(String name, String legCount, String eyeCount, String hasNose, String arms)
+	public MarshmallowMonster(String name, int legCount, int eyeCount, String hasNose, int arms)
 	{
 		this.name = name;
 		this.legCount = legCount;
@@ -35,11 +35,11 @@ public class MarshmallowMonster
 	{
 		return name;//return should always be last statement
 	}
-	public String getLegCount()
+	public int getLegCount()
 	{
 		return legCount;
 	}
-	public String getEyeCount()
+	public int getEyeCount()
 	{
 		return eyeCount;
 	}
@@ -47,7 +47,7 @@ public class MarshmallowMonster
 	{
 		return hasNoses;
 	}
-	public String getArmCount()
+	public int getArmCount()
 	{
 		return armCount;
 	}
@@ -56,11 +56,11 @@ public class MarshmallowMonster
 	{
 		this.name = name;
 	}
-	public void setLegCount(String legs)
+	public void setLegCount(int legs)
 	{
 		this.legCount = legs;
 	}
-	public void setEyeCount(String eyeCount)
+	public void setEyeCount(int eyeCount)
 	{
 		this.eyeCount = eyeCount;
 	}
@@ -68,7 +68,7 @@ public class MarshmallowMonster
 	{
 		this.hasNoses = hasNose;
 	}
-	public void setArmCount(String armCount)
+	public void setArmCount(int armCount)
 	{
 		this.armCount = armCount;
 	}

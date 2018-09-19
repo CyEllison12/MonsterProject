@@ -15,7 +15,7 @@ public class Controller
 	//Constructors initialize data members!
 	public Controller()//Call Parameter
 	{
-		myMonster = new MarshmallowMonster("Jeffery", "8.0", "3", "false", "4");	
+		myMonster = new MarshmallowMonster("Jeffery", 8, 3, "false", 4);	
 		userMonster = new MarshmallowMonster();
 	}
 	
@@ -38,13 +38,24 @@ public class Controller
 		//JOptionPane.showMessageDialog(null, "How many legs does he have(USE A DECIMAL)");
 		//double setLegCount = inputScanner.nextDouble();
 		String legs = JOptionPane.showInputDialog("How many legs does he have?");
-		userMonster.setLegCount(legs);
+		int userLegs = 0;
+		if(validInt(legs))
+		{
+			userLegs = Integer.parseInt(legs);
+			
+		}
+		userMonster.setLegCount(userLegs);
 		
 		//input eyes
 		//System.out.println("How many eyes does he have?");
 		String setEyeCount = JOptionPane.showInputDialog(null, "How many eyes does he have");
 		//int setEyeCount = inputScanner.nextInt();
-		userMonster.setEyeCount(setEyeCount);
+		int userEyes = 0;
+		if(validInt(setEyeCount))
+		{
+			userEyes = Integer.parseInt(setEyeCount);
+		}
+		userMonster.setEyeCount(userEyes);
 		
 		//input Nose (boolean True/False)
 		//System.out.println("Will he have a nose? (True/False)");
@@ -56,7 +67,12 @@ public class Controller
 		//System.out.println("How many arms will he have?");
 		String setArmCount = JOptionPane.showInputDialog(null, "How many arms will he have?");
 		//int setArmCount = inputScanner.nextInt();
-		userMonster.setArmCount(setArmCount);
+		int userArms = 0;
+		if(validInt(setArmCount))
+		{
+			userArms = Integer.parseInt(setArmCount);
+		}
+		userMonster.setArmCount(userArms);
 		
 		//output all info entered above by user
 		//ystem.out.println("This is what you named your monster:\n"
@@ -75,6 +91,43 @@ public class Controller
 		
 
 		
+		if (userMonster.getLegCount() > 5)
+		{
+			JOptionPane.showMessageDialog(null, userMonster.getName() + " has more the 5 legs!");
+		}
+		else if(userMonster.getLegCount() == 5)
+		{
+			JOptionPane.showMessageDialog(null, userMonster.getName() + " has 5 legs!");
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, userMonster.getName() + " has less then 5 legs!");
+		}
+		
+		if (userMonster.getEyeCount() > 5)
+		{
+			JOptionPane.showMessageDialog(null, userMonster.getName() + " has more the 5 eyes!");
+		}
+		else if(userMonster.getEyeCount() == 5)
+		{
+			JOptionPane.showMessageDialog(null, userMonster.getName() + " has 5 eyes!");
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, userMonster.getName() + " has less then 5 eyes!");
+		}
+		if (userMonster.getArmCount() > 5)
+		{
+			JOptionPane.showMessageDialog(null, userMonster.getName() + " has more the 5 arms!");
+		}
+		else if(userMonster.getArmCount() == 5)
+		{
+			JOptionPane.showMessageDialog(null, userMonster.getName() + " has 5 arms!");
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, userMonster.getName() + " has less then 5 arms!");
+		}
 		
 		
 		
@@ -99,7 +152,7 @@ public class Controller
 		}
 		catch (NumberFormatException error)
 		{
-			JOptionPane.showMessageDialog(null, "You need to type in a whoe number :D");
+			JOptionPane.showMessageDialog(null, "You need to type in a whole number :D");
 		}
 		return isValid;
 	}
